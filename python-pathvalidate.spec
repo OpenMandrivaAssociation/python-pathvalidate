@@ -22,7 +22,7 @@ BuildRequires:  python-click
 %py_build
 
 %install
-%py_build
+%py_install
 
 %files
 %doc README.rst
