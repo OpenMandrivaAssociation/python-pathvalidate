@@ -26,3 +26,5 @@ BuildRequires:  python-click
 
 %files
 %doc README.rst
+%{python_sitelib}/pathvalidate-*.*.*.dist-info
+%{python_sitelib}/pathvalidate/
