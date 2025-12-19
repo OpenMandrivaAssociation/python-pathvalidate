@@ -10,7 +10,8 @@ BuildArch:      noarch
 BuildRequires:  python-devel
 #BuildRequires:  python-pytest
 #BuildRequires:  python-allpairspy
-BuildRequires:  python-click
+BuildRequires:  python%{pyver}dist(click)
+BuildRequires:  python%{pyver}dist(pip)
 #BuildRequires:  python-tcolorpy
 
 %description
