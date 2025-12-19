@@ -12,6 +12,7 @@ BuildRequires:  python-devel
 #BuildRequires:  python-allpairspy
 BuildRequires:  python%{pyver}dist(click)
 BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:  python%{pyver}dist(setuptools)
 #BuildRequires:  python-tcolorpy
 
 %description
