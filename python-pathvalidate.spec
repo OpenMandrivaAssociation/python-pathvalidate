@@ -1,13 +1,14 @@
 Name:      python-pathvalidate
 Version:   3.3.1
-Release:   2
+Release:   3
 Summary:   Library to sanitize/validate a string such as file-names/file-paths/etc
 License:   MIT
+Group:     Development/Python
 URL:       https://github.com/thombashi/pathvalidate
 Source:    https://files.pythonhosted.org/packages/source/p/pathvalidate/pathvalidate-%{version}.tar.gz
 
 BuildArch:      noarch
-BuildRequires:  python-devel
+BuildRequires:  pkgconfig(python3)
 #BuildRequires:  python-pytest
 #BuildRequires:  python-allpairspy
 BuildRequires:  python%{pyver}dist(click)
@@ -24,6 +25,8 @@ BuildRequires:  python%{pyver}dist(setuptools-scm)
 %autosetup -n pathvalidate-%{version} -p1
 
 %build
+# The sdist is not a git checkout. Without this the wheel version is 0.0.0.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %py_build
 
 %install
